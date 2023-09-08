@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
+}
+body {
+  /* background: linear-gradient(to bottom, #2193b0, #6dd5ed); */
+  background: linear-gradient(to bottom, #979da1, #2c3e50);
+  min-height: 100vh;
+}
+header {
+  background-color: black;
+  /* background-color: rgb(161, 6, 6); */
+  padding: 0.7em 0 0.7em 0;
+}
+header p {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  word-spacing: 0.3em;
+  letter-spacing: 0.05em;
+}
+.createPostBtn {
+  font-size: 1.5rem;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5em;
+  margin: 1em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 6px;
+  transition: all 0.7s ease;
+}
+.createPostBtn:hover {
+  background-color: aliceblue;
+  color: #2c3e50;
+}
+.formContainer {
+  display: none;
+}
+.formContainer form {
+  padding: 1em;
+}
+.label {
+  font-size: 1.3rem;
+  color: white;
+}
+.titleForm {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.4em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.btn {
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 7px;
+  margin-left: 50px;
+  margin-top: 5px;
+  width: 5em;
+}
+.post {
+  min-width: 370px;
+  max-width: 35em;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin: 0.7em 0.2em 0.7em 0.2em;
+}
+.title {
+  border-bottom: 1px solid white;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 1.3rem;
+  padding: 0.5em;
+  min-height: 4em;
+  color: white;
+}
+.btnDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  cursor: pointer;
+  color: white;
+}
+.button:first-child:hover {
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.button:last-child:hover {
+  color: rgb(255, 188, 20);
+  border: 1px solid rgb(255, 188, 18);
+  border-radius: 5px;
+}
+.editFormDiv {
+  display: none;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 10vw;
+  bottom: 22vh;
+  width: 80%;
+  /* max-width: 70vw; */
+  background-color: rgb(51, 52, 53);
+  padding: 0.8em;
+  border-radius: 8px;
+}
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.editFormInput {
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.editFormButton {
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.cross {
+  color: white;
+}
+.alertBox {
+  position: sticky;
+  bottom: 70%;
+  left: 80%;
+  width: auto;
+  font-size: 1.2rem;
+  padding: 0.2em 0.8rem 0.2rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+  visibility: hidden;
+}
+.red {
+  visibility: visible;
+  background: rgb(243, 40, 40);
+}
+.blue {
+  visibility: visible;
+  background: blue;
+}
+.green {
+  visibility: visible;
+  background: #56ab2f;
+}
+.black {
+  visibility: visible;
+  background: black;
+}
+@media screen and (max-width: 890px) {
+  .Heading {
+    font-size: 3rem;
+  }
+  .fourCon {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .pContained {
+    justify-content: flex-start;
+  }
+  .Heading {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  .linkContained {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 700px) {
+  .fourCon {
+    width: 50%;
+  }
+  .linkCon {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 594px) {
+  .fourCon {
+    width: 90%;
+  }
+  .linkCon {
+    width: 70%;
+  }
+  header p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pContained {
+    flex-direction: column;
+  }
+  .fourCon {
+    width: 100%;
+    font-size: 1.2rem;
+    list-style-type: circle;
+  }
+}
+@media screen and (max-width: 410px) {
+  .Heading {
+    font-size: 2rem;
+  }
+  .fourCon {
+    font-size: 0.9rem;
+  }
+  .linkCon {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  header p {
+    font-size: 1.5rem;
+  }
+  .fourCon {
+    font-size: 0.8rem;
+  }
+  .linkCon {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .Heading {
+    font-size: 1.7rem;
+  }
+}
