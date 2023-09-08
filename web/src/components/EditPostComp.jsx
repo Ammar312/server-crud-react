@@ -2,17 +2,17 @@ import React from "react";
 
 const EditPostComp = ({ eachPost, index, cancelEdit, saveEdit }) => {
   return (
-    <div className=" my-3 max-w-3xl">
+    <div className=" my-3 max-w-2xl shadow-2xl">
       <div className=" border-yellow-500 border-2 p-3">
         <div className=" flex flex-col">
           <input
-            className=" text-3xl font-medium"
+            className=" text-3xl font-medium p-2 outline-1 outline-gray-300"
             defaultValue={eachPost.title}
             type="text"
             placeholder="title"
           />
           <textarea
-            className=" text-lg my-3"
+            className=" text-lg my-3 p-2 outline-1 outline-gray-300"
             defaultValue={eachPost.text}
             type="text"
             placeholder="What's in your mind"
