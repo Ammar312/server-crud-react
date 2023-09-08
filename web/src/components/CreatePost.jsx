@@ -80,7 +80,7 @@ const CreatePost = () => {
   };
   return (
     <div>
-      <div className=" border-2 border-purple-500 max-w-2xl">
+      <div className=" border-2  border-purple-900 max-w-xl">
         <form onSubmit={submitPost} className=" flex flex-col gap-2 p-4">
           <input
             className="border-2 p-2 text-lg"

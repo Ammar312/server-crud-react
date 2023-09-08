@@ -3,7 +3,7 @@ import CreatePost from "./components/CreatePost";
 
 const App = () => {
   return (
-    <div className=" p-2 min-h-screen bg-gradient-to-tr from-[#005AA7] to-[#FFFDE4]">
+    <div className=" p-2 min-h-screen bg-gradient-to-tr from-[#D3CCE3] to-[#E9E4F0]">
       <CreatePost />
     </div>
   );

@@ -12,13 +12,13 @@ const Post = ({ eachPost, deleteHandle, editPost, index }) => {
     setOpen(true);
   };
   return (
-    <div className=" my-3 max-w-2xl shadow-lg">
-      <div className=" border-green-500 border-2 p-3">
+    <div className=" my-3 max-w-xl shadow-lg">
+      <div className=" border-2 p-3">
         <h2 className=" text-3xl font-medium">{eachPost.title}</h2>
         <p className=" text-lg my-3">{eachPost.text}</p>
         <div className=" flex gap-x-5">
           <button
-            className=" text-blue-400 text-lg"
+            className=" text-white bg- text-lg px-4 bg-green-500"
             onClick={() => editPost(index)}
           >
             Edit
@@ -28,7 +28,6 @@ const Post = ({ eachPost, deleteHandle, editPost, index }) => {
             title="Delete The Post"
             description="Are you sure to delete this post?"
             open={open}
-            // onOpenChange={handleOpenChange}
             onConfirm={() => deleteHandle(eachPost._id)}
             onCancel={cancel}
             okType="default"
@@ -37,7 +36,7 @@ const Post = ({ eachPost, deleteHandle, editPost, index }) => {
             cancelText="No"
           >
             <button
-              className=" text-red-500 text-lg"
+              className=" text-white text-lg px-4 bg-red-400"
               // onClick={() => deleteHandle(eachPost._id)}
               onClick={showPopconfirm}
             >
