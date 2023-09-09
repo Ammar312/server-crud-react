@@ -8,7 +8,6 @@ const CreatePost = () => {
   const baseURL = "http://localhost:3000";
   const [allPosts, setAllPosts] = useState([]);
   const [toggleRefresh, setToggleRefresh] = useState(false);
-  const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const titleInput = useRef();
   const bodyInput = useRef();
@@ -44,7 +43,6 @@ const CreatePost = () => {
       const response = await axios.delete(`${baseURL}/api/v1/post/${id}`);
       console.log(response.data);
       setConfirmLoading(true);
-      setOpen(false);
       message.success(`${response.data}`);
       setToggleRefresh(!toggleRefresh);
     } catch (error) {
@@ -80,10 +78,10 @@ const CreatePost = () => {
   };
   return (
     <div>
-      <div className=" border-2  border-purple-900 max-w-xl sticky top-0  bg-[#E9E4F0]">
+      <div className=" border-2 border-purple-900 max-w-lg bg-[#E9E4F0]">
         <form onSubmit={submitPost} className=" flex flex-col gap-2 p-4">
           <input
-            className="border-2 p-2 text-lg"
+            className="border-2 p-2 text-lg outline-none"
             type="text"
             required
             placeholder="Title of the post"
@@ -100,7 +98,10 @@ const CreatePost = () => {
             rows="3"
             className="border-2 p-2 text-lg outline-none "
           ></textarea>
-          <button type="submit" className="border-2 w-44 p-3 rounded-xl">
+          <button
+            type="submit"
+            className="border-2 border-white text-white font-medium w-44 p-3 rounded-xl hover:text-black hover:bg-white transition-all"
+          >
             Publish
           </button>
         </form>

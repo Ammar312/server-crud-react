@@ -12,7 +12,7 @@ const Post = ({ eachPost, deleteHandle, editPost, index }) => {
     setOpen(true);
   };
   return (
-    <div className=" my-3 max-w-xl shadow-lg">
+    <div className=" my-4 max-w-[620px] shadow-lg">
       <div className=" border-2 p-3">
         <h2 className=" text-3xl font-medium">{eachPost.title}</h2>
         <p className=" text-lg my-3">{eachPost.text}</p>
@@ -28,7 +28,10 @@ const Post = ({ eachPost, deleteHandle, editPost, index }) => {
             title="Delete The Post"
             description="Are you sure to delete this post?"
             open={open}
-            onConfirm={() => deleteHandle(eachPost._id)}
+            onConfirm={() => {
+              deleteHandle(eachPost._id);
+              setOpen(false);
+            }}
             onCancel={cancel}
             okType="default"
             okText="Yes"

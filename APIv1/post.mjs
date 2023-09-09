@@ -22,7 +22,7 @@ router.get("/post/:postId", (req, res, next) => {
 });
 
 router.get("/posts", async (req, res, next) => {
-  const allPosts = dbCollection.find({});
+  const allPosts = dbCollection.find({}).sort({ _id: -1 });
   const allPostsIntoArray = await allPosts.toArray();
   console.log("allPostsIntoArray :", allPostsIntoArray);
 
