@@ -86,7 +86,7 @@ const CreatePost = () => {
             required
             placeholder="Title of the post"
             minLength={3}
-            maxLength={50}
+            maxLength={70}
             ref={titleInput}
           />
           <textarea
@@ -100,7 +100,7 @@ const CreatePost = () => {
           ></textarea>
           <button
             type="submit"
-            className="border-2 border-white text-white font-medium w-44 p-3 rounded-xl hover:text-black hover:bg-white transition-all"
+            className="border-2 border-white text-[1.1rem] text-white font-medium w-44 p-3 rounded-xl hover:text-black hover:bg-white transition-all"
           >
             Publish
           </button>
