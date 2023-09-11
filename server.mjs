@@ -13,7 +13,7 @@ app.use(cors());
 app.use("/api/v1", apiv1);
 app.use("/api/v2", apiv2);
 
-app.use(express.static(path.join(__dirname, "./web/dist")));
+app.use(express.static(path.join(__dirname, "web/dist")));
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
